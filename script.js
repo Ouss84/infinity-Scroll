@@ -23,14 +23,19 @@ function displayPhotos(){
         //creating the anchor element
         const anchor = document.createElement('a');
         //populating the anchor with its attributes
-        anchor.setAttribute('href', photo.links.html);
-        anchor.setAttribute('target', '_blank');
+        setAttributes(anchor, {
+            href : photo.links.html,
+            target : '_blank',
+        })
         //creating the image inside the anchor
         const image = document.createElement ('img');
         //defining the image attributes
-        image.setAttribute('src', photo.urls.regular);
-        image.setAttribute('alt', photo.alt_description);
-        image.setAttribute('title', photo.alt_description);
+        
+        setAttributes(image, {
+            src : photo.urls.regular,
+            alt : photo.alt_description,
+            title : photo.alt_description,
+        });
         // appending the image inside the anchor and then the anchor inside the image-container
         anchor.appendChild(image);
         imageConatainer.appendChild(anchor);
