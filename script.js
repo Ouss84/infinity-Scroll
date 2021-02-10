@@ -52,5 +52,13 @@ async function getRandomPicture (){
     };
 }
 
+//implementing the load functionality
+window.addEventListener('scroll', () =>{
+    if ( window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000){
+        getRandomPicture();
+        console.log('loaded')
+    }
+})
+
 //run the app
 getRandomPicture()
