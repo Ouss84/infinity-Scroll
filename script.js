@@ -32,7 +32,6 @@ function setAttributes (element, attributes){
 function displayPhotos(){
     imagesLoaded = 0;
     totalImages = photosArray.length;
-    console.log ("total images",totalImages);
     //run a forEach loop to the photosArray
     photosArray.forEach ((photo) => {
         //creating the anchor element
